@@ -1,5 +1,10 @@
 plugins {
     kotlin("jvm") version "2.3.0"
+    application
+}
+
+application {
+    mainClass.set("MainKt")
 }
 
 group = "org.example"
@@ -11,6 +16,8 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
+    implementation("org.apache.sshd:sshd-core:2.12.0")
+    implementation("org.jline:jline:3.25.1")
 }
 
 kotlin {
